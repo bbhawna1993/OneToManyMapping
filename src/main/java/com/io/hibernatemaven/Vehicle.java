@@ -18,6 +18,7 @@ public class Vehicle {
 	private String vehicleName;
 
 	@ManyToOne
+	@JoinColumn(name="USER_ID")
 	private UserDetails user;
 
 	public int getVehicleId() {
