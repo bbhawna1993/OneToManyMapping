@@ -7,8 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+
 
 @Entity(name="USER_DETAILS")
 public class UserDetails {
@@ -17,7 +18,7 @@ public class UserDetails {
 	private int userId;
 	private String userName;
 
-	@OneToMany
+	@OneToMany(mappedBy="user")
 	private Collection<Vehicle> vehicles_list=new ArrayList();
 
 	public Collection<Vehicle> getVehicles_list() {
