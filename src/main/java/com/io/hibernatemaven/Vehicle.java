@@ -3,6 +3,8 @@ package com.io.hibernatemaven;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  * @author bhabhawna
@@ -14,6 +16,10 @@ public class Vehicle {
 	@Id @GeneratedValue
 	private int vehicleId;
 	private String vehicleName;
+
+	@ManyToOne
+	@JoinColumn(name="USER_ID")
+	private UserDetails userId;
 
 	public int getVehicleId() {
 		return vehicleId;
