@@ -1,5 +1,4 @@
 package com.io.hibernatemaven;
-import javax.persistence.Embeddable;
 
 //It will be embeddable
 //@Embeddable
