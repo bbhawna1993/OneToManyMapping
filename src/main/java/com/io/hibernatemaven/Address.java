@@ -2,6 +2,7 @@ package com.io.hibernatemaven;
 
 //It will be embeddable
 //@Embeddable
+//adding changes for other paramters
 public class Address {
 
 	private String city;
